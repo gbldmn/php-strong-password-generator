@@ -38,6 +38,7 @@ if(!empty($_GET['lunghezza_password'])){
             <div class="row mt-3">
                 <div class="col text-center">
                     <button type="submit" class="btn btn-info bg-secondary btn-lg">Genera</button>
+                    <a href="./index.php" class="btn btn-info bg-secondary btn-lg">annulla</a>
                 </div>
             </div>
         </form>
