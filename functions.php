@@ -1,15 +1,16 @@
 <?php 
-        $lunghezzaPassword = $_GET['psw_length'];
+        $lunghezzaPassword = $_GET['lunghezza_password'];
 
         function getRandomPassword($lunghezzaPassword){
-          $caratteri = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!?&%$<>^+-*/()[]{}@#_=';
           $password = '';
+          $caratteri = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!?&%$<>^+-*/()[]{}@#_=';
+    
           for($i = 0; $i < $lunghezzaPassword; $i++){
             $password .= $caratteri[rand (0, strlen($caratteri))];
           }
-          var_dump($password);
+        //   var_dump($password);
           return $password;
         };
         // var_dump($password);
-        echo getRandomPassword($lunghezzaPassword);
+        getRandomPassword($lunghezzaPassword);
     ?>
