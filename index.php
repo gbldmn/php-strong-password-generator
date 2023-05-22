@@ -1,3 +1,16 @@
+<?php
+
+include './functions.php';
+
+
+
+if(!empty($_GET['psw_length'])){
+    session_start();
+
+    $_SESSION['psw_length'] = getRandomPassword($lunghezzaPassword);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,21 +22,6 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css' integrity='sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==' crossorigin='anonymous' />
 </head>
 <body>
-
-    <?php 
-        $lughezzaPassword = $_GET['psw_length'];
-
-        function getRandomPassword($lunghezzaPassword){
-          $caratteri = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!?&%$<>^+-*/()[]{}@#_=';
-          $password = '';
-          for($i = 0; $i < $lunghezzaPassword; $i++){
-            $password .= $caratteri[rand (0, strlen($caratteri))];
-          }
-          return $password;
-        };
-    ?>
-
-
 
 
     <div class="container m-0">
