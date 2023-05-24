@@ -6,7 +6,7 @@
           $caratteri = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!?&%$<>^+-*/()[]{}@#_=';
     
           for($i = 0; $i < $lunghezzaPassword; $i++){
-               $password .= $caratteri[rand (0, strlen($caratteri))];
+               $password .= $caratteri[rand (0, strlen($caratteri) -1 )];
            }
             // var_dump($password);
            return $password;
